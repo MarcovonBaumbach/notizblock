@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "notizblock-8e287": {
+      "hosting": {
+        "notizblock": [
+          "notizblock-8e287"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "notizblock-8e287"
+  }
+}

@@ -1,0 +1,11 @@
+<div class="create-note-style">
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>What's your note title?</mat-label>
+      <input matInput [(ngModel)]=dataservice.title>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" [disabled]="titleEmpty" (click)="openDialog()">Write Note</button>
+  </div>
+</div>

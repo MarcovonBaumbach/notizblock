@@ -1,0 +1,34 @@
+h1 {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.notes-style {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    max-width: 300px;
+
+    textarea {
+        max-width: 250px;
+        max-height: 300px;
+    }
+}
+
+.card-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    img {
+        height: 16px;
+        width: auto;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
