@@ -30,13 +30,16 @@ export class NotesComponent {
       width: '400px',
     });
 
-    dialogRef.afterClosed().subscribe(() => {
+    dialogRef.afterClosed().subscribe(async() => {
       if(!this.dataservice.abort) {
       if(this.dataservice.note) {
-        const currentNote = collectionData(collection(this.firestore, 'new-notes'), { idField: 'id'});
-
-        updateDoc(doc(this.firestore, `new-notes/${currentNote['id']}`), {note: this.dataservice.note,
-        title: this.dataservice.title});
+        //const currentNote = collectionData(collection(this.firestore, 'new-note'), { idField: 'id'});
+        const notesRef = doc(this.firestore, 'new-note', newNote.docId);
+        await updateDoc(notesRef , {
+          note: this.dataservice.note
+        });
+        // updateDoc(doc(this.firestore, `new-note/${docId}`), {note: this.dataservice.note,
+        // title: this.dataservice.title});
       }
     }
      
