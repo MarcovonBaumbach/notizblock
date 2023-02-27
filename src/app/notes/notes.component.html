@@ -1,6 +1,6 @@
 <h1>Your Notes</h1>
 <div class="card-layout">
-    <mat-card *ngFor="let newNote of item$ | async" class="notes-style">
+    <mat-card *ngFor="let newNote of coll$ | async, let i = index" class="notes-style">
         <mat-card-header>
             <mat-card-title>{{ newNote.title }}</mat-card-title>
         </mat-card-header>
@@ -8,7 +8,7 @@
             <textarea matInput [disabled]="editMode" placeholder="Edit your Note">{{ newNote.note }}</textarea>
             <div class="img-style">
                 <img (click)="editNote(newNote)" src="assets/img/edit.png">
-                <img src="assets/img/trash.png">
+                <img (click)="deleteNote(newNote)" src="assets/img/trash.png">
             </div>
         </mat-card-content>
     </mat-card>

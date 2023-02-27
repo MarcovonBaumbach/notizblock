@@ -17,16 +17,16 @@ export interface DialogData {
 })
 export class CreateNoteComponent implements OnInit {
   titleEmpty: boolean = true;
-  item$: Observable<any>;
+  coll$: Observable<any>;
 
 
   constructor(public dialog: MatDialog,
     public firestore: Firestore,
     public dataservice: DataService) {
     const coll = collection(firestore, 'new-note');
-    this.item$ = collectionData(coll);
+    this.coll$ = collectionData(coll);
 
-    this.item$.subscribe((newNote) => {
+    this.coll$.subscribe((newNote) => {
       console.log('neue Note:', newNote);
     });
   }
