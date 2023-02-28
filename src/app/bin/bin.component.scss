@@ -1,0 +1,38 @@
+.notes-style {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    max-width: 300px;
+
+    textarea {
+        max-width: 250px;
+        max-height: 300px;
+    }
+}
+
+.card-layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.img-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    span {
+        cursor: pointer;
+        color: blueviolet;
+        &:hover {
+            filter: brightness(0.8);
+        }
+    }
+
+    img {
+        height: 16px;
+        width: auto;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}

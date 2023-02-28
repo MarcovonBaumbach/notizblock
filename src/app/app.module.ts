@@ -18,6 +18,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { NotesComponent } from './notes/notes.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { BinComponent } from './bin/bin.component';
+import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {MatButtonModule} from '@angular/material/button';
     HeaderComponent,
     CreateNoteComponent,
     DialogComponent,
-    NotesComponent
+    NotesComponent,
+    BinComponent,
+    DeleteDialogComponent
   ],
   imports: [
     BrowserModule,

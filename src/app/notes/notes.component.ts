@@ -15,6 +15,7 @@ export class NotesComponent {
   editMode: boolean = true;
   coll$: Observable<any>;
   bin$: Observable<any>;
+  noteGotDeleted = false;
 
   constructor(public firestore: Firestore,
     public dialog: MatDialog,
@@ -32,7 +33,10 @@ export class NotesComponent {
       docId: newNote.docId
     });
     await deleteDoc(doc(this.firestore, 'new-note', newNote.docId));
-    window.alert('Note got moved to bin!');
+    this.noteGotDeleted = true;
+    setTimeout(() => {
+      this.noteGotDeleted = false;
+    }, 3000);
   }
 
   editNote(newNote): void {

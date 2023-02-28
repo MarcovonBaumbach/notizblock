@@ -32,3 +32,41 @@ h1 {
         cursor: pointer;
     }
 }
+
+.d-none {
+    display: none;
+}
+
+.note-deleted {
+    display: unset;
+    position: absolute;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 200px;
+    border-radius: 20px;
+    background-color: rgb(238, 183, 183);
+    animation: popup 3s ease-in-out;
+    z-index: 3;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(200px);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateY(200px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}

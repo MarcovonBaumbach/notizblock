@@ -3,10 +3,10 @@
 <div mat-dialog-content>
   <mat-form-field appearance="fill" [style.width.px]=350>
     <mat-label>Your Note</mat-label>
-    <input matInput [(ngModel)]=dataservice.note>
+    <textarea matInput [(ngModel)]=dataservice.note></textarea>
   </mat-form-field>
 </div>
 <div mat-dialog-actions class="button-style">
   <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
-  <button mat-raised-button color="primary" (click)="onYesClick()" cdkFocusInitial>Change</button>
+  <button mat-raised-button color="primary" (click)="onYesClick()" cdkFocusInitial>OK</button>
 </div>

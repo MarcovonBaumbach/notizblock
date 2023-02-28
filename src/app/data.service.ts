@@ -7,6 +7,7 @@ export class DataService {
   note: string;
   title: string;
   abort: boolean = true;
+  delete: boolean = false;
 
   constructor() { }
 }

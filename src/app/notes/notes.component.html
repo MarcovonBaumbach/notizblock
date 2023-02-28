@@ -1,6 +1,10 @@
+<mat-card>
+    <mat-card-content class="d-none" [class.note-deleted]="noteGotDeleted">Note got moved to bin!</mat-card-content>
+</mat-card>
+<app-create-note></app-create-note>
 <h1>Your Notes</h1>
 <div class="card-layout">
-    <mat-card *ngFor="let newNote of coll$ | async, let i = index" class="notes-style">
+    <mat-card *ngFor="let newNote of coll$ | async" class="notes-style">
         <mat-card-header>
             <mat-card-title>{{ newNote.title }}</mat-card-title>
         </mat-card-header>

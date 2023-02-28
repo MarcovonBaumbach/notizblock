@@ -1,0 +1,14 @@
+<div class="card-layout">
+    <mat-card *ngFor="let newNote of bin$ | async" class="notes-style">
+        <mat-card-header>
+            <mat-card-title>{{ newNote.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <textarea matInput [disabled]>{{ newNote.note }}</textarea>
+            <div class="img-style">
+                <span (click)="restoreNote(newNote)">restore</span>
+                <img (click)="openDialog(newNote)" src="assets/img/trash.png">
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
